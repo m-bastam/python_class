@@ -1,0 +1,49 @@
+﻿{
+    "Sheet1": [
+        {
+            "Model": "Asus-k",
+            "processor": "core i5",
+            "cache": "6 MB",
+            "RAM": "8 GB",
+            "display": "15\" Full HD",
+            "price": "7.750 MT",
+            "link": "https://www.digikala.com/product/dkp-1765738/لپ-تاپ-15-اینچی-ایسوس-مدل-vivobook-k540ub-d#/tab-desc"
+        },
+        {
+            "Model": "Lenovo-ideapad",
+            "processor": "core i3",
+            "cache": "4 MB",
+            "RAM": "4 GB",
+            "display": "15\"",
+            "price": "4.560 MT",
+            "link": "https://www.digikala.com/product/dkp-905012/لپ-تاپ-15-اینچی-لنوو-مدل-ideapad-330-fa#/tab-params"
+        },
+        {
+            "Model": "Asus-F",
+            "processor": "core i7",
+            "cache": "8 MB",
+            "RAM": "8 GB",
+            "display": "15\"",
+            "price": "12.220 MT",
+            "link": "https://www.digikala.com/product/dkp-1984026/لپ-تاپ-15-اینچی-ایسوس-مدل-fx570ud-m#/tab-params"
+        },
+        {
+            "Model": "Lenovo-ideapad",
+            "processor": "core i5",
+            "cache": "6 MB",
+            "RAM": "8 GB",
+            "display": "15\"",
+            "price": "10.526 MT",
+            "link": "https://www.digikala.com/product/dkp-2318327/لپ-تاپ-15-اینچی-لنوو-مدل-ideapad-s540-a#/tab-params"
+        },
+        {
+            "Model": "Asus-VivoBook",
+            "processor": "Core i7",
+            "cache": "8 MB",
+            "RAM": "8 GB",
+            "display": "15\"",
+            "price": "11.289 MT",
+            "link": "https://www.digikala.com/product/dkp-2247356/لپ-تاپ-15-اینچی-ایسوس-مدل-vivobook-r564fl-n?variant_id=6593115&ads_cookie=eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJ0eXBlIjoic3BvbnNvcmVkIiwiaWQiOjc5MzI5LCJ2YXJpYW50X2lkIjo2NTkzMTE1LCJleHBpcmVfYXQiOjE1ODM5MTc0NjJ9.YR9fyK5siPBtjUeNQpob8pXSG0FtltiRbPTa9ACFCqA#/tab-params"
+        }
+    ]
+}
