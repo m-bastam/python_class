@@ -31,6 +31,7 @@ class Member:
         self.is_active = uactive
         # Set an expiration date
         self.free_expires = dt.date.today() + dt.timedelta(days = Member.free_days)
+        print('a new object is initiated!' , self)
         
     
     # Define methods as functions, use self for "this" object.
@@ -72,22 +73,30 @@ print(type(new_person))
 print(new_person.username)
 print(new_person.fullname)
 print(new_person.date_joined)
+print(new_person.free_expires)
 print(new_person.is_active)
 print('\t------------------------------\n')
 new_person.username = "Ardavan"
 # new_person.is_active = False
 new_person.activate(False)
-new_person.activate(True)
+# new_person.activate(True)
 # Member.activate(new_person, False) # ‌an alternative syntax
 print(new_person.username)
 print(new_person.is_active)
 print(new_person.show_datejoined())
 print(new_person.is_active)
 print(new_person.free_days)
+# new_person.free_days = 150
+# print(new_person.free_days)
+
 print(new_person.free_expires)
 
 print('\t------------------------------\n')
+# np = Member("Farhad", "Abasi", False)
+# print (np.username)
+# print(np.free_days)
 Member.setـfreedays(120)
+
 second_person = Member('Mary' , 'Anderson')
 print(second_person.show_datejoined())
 print(second_person.is_active)
@@ -102,5 +111,7 @@ print(third_person.is_active)
 print(third_person.free_days)
 print(third_person.free_expires)
 print('\t------------------------------\n')
+
+   
 print(Member.currenttime())
 print(third_person.currenttime())
