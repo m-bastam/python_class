@@ -1,17 +1,17 @@
 class Color():
     '''An RGB color, with red, green and blue components.'''
-    def __init__(self,r=0, g=0, b=0):
+    def __init__(self,r = 0, g = 0, b = 0):
         '''A new color with red value r, green value g, and 
         blue value b.All components are integers in the range 0-255.'''
-        self.red=r
-        self.green=g
-        self.blue=b
+        self.red = r
+        self.green = g
+        self.blue = b
     
     def __str__(self):
         '''Return a string representation of this Color in the
         form of an RGBtuple.'''
-        
-        return '({0}, {1}, {2})'.format(self.red, self.green, self.blue)
+        return f'({self.red},{self.green},{self.blue})'
+        # return '({0}, {1}, {2})'.format(self.red, self.green, self.blue)
     
     def __add__(self, other_color): #operator overloading
         '''Return a new Color made from adding the red, green, and blue
@@ -52,11 +52,25 @@ class Color():
 # print(new_point)
 purple = Color(128, 0, 128)
 white = Color(255, 255, 255)
+black = Color ()
+black2 = Color(0 , 0 , 0)
 dark_grey = Color(50, 50, 50)
-print (purple + dark_grey) #operator overloading
+
+print(purple)
 print (purple.__add__(dark_grey))
+print (purple + dark_grey) #operator overloading
+
+print(purple.__sub__(dark_grey))
+print(purple - dark_grey)
+
+print ( purple.__eq__(dark_grey))
+print(purple == dark_grey)
+
 print (white == Color(255, 255, 255))
 print (white - dark_grey)
+
 print(dark_grey.__dict__)
-# print(dir(white))
-# help(Color)
+print (purple.__dict__)
+
+print(dir(white))
+help(Color)

@@ -34,5 +34,9 @@ point1.z += 200
 print (point1 , point1.z)
 
 # print (point2 , point2.z)
-del point1
+# del point1
 point1.test()
+ 
+print(point3.__dict__)
+print(dir(Cpoint))
+print(dir(point3))

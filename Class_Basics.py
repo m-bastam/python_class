@@ -112,6 +112,8 @@ print(third_person.free_days)
 print(third_person.free_expires)
 print('\t------------------------------\n')
 
+# return a dictionary of object's attributes
+print(second_person.__dict__)
    
 print(Member.currenttime())
 print(third_person.currenttime())
