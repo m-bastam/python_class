@@ -7,10 +7,10 @@ class Cpoint:
     
     
     def __str__(self):
-       return '({0}, {1})'.format(self.x, self.y)
+       return f"({self.x},{self.y})"
         
     def test(self):
-        print('this is test')
+        print('this is test' , self)
     
          
         
@@ -19,14 +19,20 @@ point2 = Cpoint(20, 30)
 point3 = Cpoint(5, 8 )
 
 print(point1)
+# print(point1.__str__())
 print(point2)
 print(point3)
 
 
+point1.test()
+point2.test()
 point3.test()
-Cpoint.test(point3)
+
+# Cpoint.test(point3)
 point1.z = 100
+point1.z += 200
 print (point1 , point1.z)
+
 # print (point2 , point2.z)
 del point1
-# point1.test()
+point1.test()
