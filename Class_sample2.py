@@ -75,15 +75,16 @@ print(r2.area())
 print(r2.contains(Cpoint(25,35)))
 print(r2)
 print(r2.get_max_x())
-print( "\t--------------------------\t\n")
+print( "\t---------1-----------------\t\n")
 
 rec1 = r1
 print (rec1 is r1)
 rec1.point = Cpoint(50, 50)
 print (rec1.point)
 print(r1.point)
+print(r1.__dict__)
 
-print("\t---------------------------\n")
+print("\t-----------2----------------\n")
 import copy
 # shallow copying
 new_rec1 = copy.copy(r1)

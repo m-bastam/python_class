@@ -24,8 +24,9 @@ class Member:
 user = Member('Sara', 'Brown')
 print(user.firstname, user.lastname, user.expiry_date)
 print(user.get_status())
+print(user.show_expiry())
 
-print('\t-------------------------------\n\n')
+print('\t--------------1-----------------\n\n')
 
 # Subclass for Admins.
 class Admin(Member):
@@ -50,15 +51,15 @@ class User(Member):
         return f"{self.firstname} is a regular User."
 
 
-user_A = Admin('Annie', 'Angst', '1@#seq!')
+user_A = Admin('Hamid', 'Ahmadi', '123!@#asd')
 print(user_A.firstname, user_A.lastname, user_A.expiry_date)
 print(user_A.secret_code)
 print(user_A.show_expiry())
 print(user_A.get_status())
 
-print('\t-------------------------------\n\n')
+print('\t--------------2-----------------\n\n')
 
-user_C = User('Uli', 'Ungula')
+user_C = User('sara', 'naghavi')
 print(user_C.firstname, user_C.lastname, user_C.expiry_date)
 print(user_C.show_expiry())
 print(user_C.get_status())
