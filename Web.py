@@ -7,6 +7,7 @@ import json
 # If you want to save to CSV.
 import csv
 
+
 # URL (address) of the desired page.
 # sample_url = 'https://AlanSimpson.me/python/sample.html'
 
@@ -18,22 +19,47 @@ their rights to their own content, and in part to have some control over the inc
 # Sample page for practice.
 sample_url = 'https://alansimpson.me/python/scrape_sample.html'
 # Request the page and put it in a variables named the page.
-req_page = request.urlopen(sample_url)
+req = request.Request(sample_url)
+# req_page = request.urlopen(sample_url)
+req_page = request.urlopen(req)
+#urlopen function is used to create an object similar to a file,with which to readfrom the URL.
+#This object has methods such as read, readline,readlines, and close.
+
+print("\t------Http request Headers-----------\n ")
+print(type(req))
+print(req.header_items())
+print(req.get_header('User-agent'))
+
+print('\t--------HTTP Response ---------------\t')
+print(type(req_page))
+print(req_page)
+print(req_page.readline)
+print(req_page.status)
+print(req_page.code , req_page.version)
+print(req_page.headers)
 
 # Make a BeautifulSoup object from the html page. You’ll also have to tell BeautifulSoup
 # how you want the page parsed. (html5lib)
 soup = BeautifulSoup(req_page, 'html5lib')
-
-# Isolate the main content block.
-content = soup.article
+# print(soup.prettify())
+# print(soup)
+# # Isolate the main content block.
+content = soup.body
 # print(content)
+# print(type(content))
 # Create an empty list for dictionary items.
 links_list = []
 # Loop through all the links in the article.
-# print(content.find_all('a'))
-for link in content.find_all('a'):
+# To find all instances of a given element, we use the find_all() method. 
+# This will give us back a list of all tags found within the code.
+result = content.find_all('a')
+print(type(result), len(result))
+print(result)
+
+for link in result:
     # Try to get the href, image url, and text.
     try:
+        # print(type(link))
         url = link.get('href')
         img = link.img.get('src')
         text = link.span.text
@@ -43,8 +69,8 @@ for link in content.find_all('a'):
         #... skip it, don't blow up.
         pass
 
+# print(links_list)
 print(len(links_list))
-print(links_list)
 
 # Save links in a JSON file.
 with open('links.json', 'w', encoding='utf-8') as links_file:
@@ -59,10 +85,3 @@ with open('links.csv', 'w', newline='') as csv_out:
         csv_writer.writerow([str(row['url']),str(row['img']),str(row['text'])])
 
 
-# Put the response code in a variable named status.
-status = req_page.code
-# What is the data type of the page?
-print(type(req_page))
-# What is the status code?
-print(status)
-# help(BeautifulSoup)
